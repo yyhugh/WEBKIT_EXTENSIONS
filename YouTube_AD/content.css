@@ -1,0 +1,5 @@
+#player-ads,
+.ytd-ad-slot-renderer,
+.ytd-in-feed-ad-layout-renderer {
+  display: none !important;
+}
