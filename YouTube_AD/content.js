@@ -37,17 +37,15 @@ function runWatchPage() {
 
     function skip() {
       // 情景1:能点击跳过
-      // 类型1
-      getDOM(".ytp-ad-skip-button").then((el) => {
+      getDOM("[id^=skip-button]").then((el) => {
         el.click();
       });
-      // 类型2
-      getDOM(".ytp-ad-skip-button-modern").then((el) => {
+      getDOM(".ytp-ad-skip-button-modern.ytp-button").then((el) => {
         el.click();
       });
-      
+
       // 情景2:强制看广告
-      getDOM(".ytp-ad-player-overlay-instream-info").then(() => {
+      getDOM("[id^=ad-duration-remaining]").then(() => {
         try {
           video.currentTime = video.duration - 0.1;
         } catch (error) {}
